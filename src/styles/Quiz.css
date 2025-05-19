@@ -1,0 +1,76 @@
+/* Quiz.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #78848f;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.quiz-container {
+  background: #dad6d6;
+  margin-top: 50px;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+.quiz-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.quiz-container p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.quiz-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quiz-container li {
+  margin-bottom: 10px;
+}
+
+.quiz-container li button {
+  background-color: #e7f3ff;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-container li button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.quiz-container button.next-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quiz-container button.next-btn:hover {
+  background-color: #218838;
+}

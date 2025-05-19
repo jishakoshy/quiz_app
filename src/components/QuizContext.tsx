@@ -3,7 +3,7 @@ import React, { createContext, useState } from "react";
 
 export interface QuizContextType {
   score: number;
-  setScore: React.Dispatch<React.SetStateAction<number>>;
+  setScore: React.Dispatch<React.SetStateAction<number>>; 
   currentIndex: number;
   setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
 }
@@ -11,7 +11,7 @@ export interface QuizContextType {
 // Use undefined instead of null for better TS support
 export const QuizContext = createContext<QuizContextType | undefined>(undefined);
 
-export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {   
   const [score, setScore] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -21,3 +21,5 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
     </QuizContext.Provider>
   );
 };
+
+

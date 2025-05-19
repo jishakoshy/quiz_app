@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { QuizContext } from './QuizContext'; // ✅ since it's in the same folder
+import { QuizContext } from './QuizContext';
 import Question from './Question';
 
 const questions = [
@@ -17,21 +17,24 @@ const questions = [
 
 const Quiz: React.FC = () => {
   const quizContext = useContext(QuizContext);
-
-  // ✅ Proper type-check to avoid TS2339 error
   if (!quizContext) return null;
 
-  const { currentIndex } = quizContext;
+  const { currentIndex, score } = quizContext;
 
   return (
     <>
       {currentIndex < questions.length ? (
         <Question data={questions[currentIndex]} />
       ) : (
-        <h2>Quiz Over! ✅</h2>
+        <div className="quiz-container">
+          <h2>Quiz Over! ✅</h2>
+          <p>Your Score: <strong>{score}</strong> / {questions.length}</p>
+        </div>
       )}
     </>
   );
 };
 
 export default Quiz;
+
+
